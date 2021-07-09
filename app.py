@@ -7,7 +7,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-from Amazon_Streamlit import get_URL
+from Helper_code import get_URL
 
 st.set_page_config(layout="wide")
 st.title("Amazon Reviews Scrapper")
