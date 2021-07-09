@@ -22,4 +22,4 @@ streamlit run app.py
     </clipboard-copy>
   </div></div>
   
-  where, venv is basically virtual env , you can name it anything mine was "Democracy" and app.py is stream.py in this case (which internally calls the extractor and sentiment analyzer code)
+  where, venv is basically virtual env , you can name it anything mine was "Democracy"
