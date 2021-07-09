@@ -9,7 +9,12 @@ pip install -r requirements.txt
 streamlit run app.py
 </pre>
 
-<clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="python -m venv venv
+<div class="snippet-clipboard-content position-relative"><pre><code>python -m venv venv
+venv/Scripts/activate
+pip install -r requirements.txt
+streamlit run app.py
+</code></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="python -m venv venv
 venv/Scripts/activate
 pip install -r requirements.txt
 streamlit run app.py
@@ -20,5 +25,5 @@ streamlit run app.py
       <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-check js-clipboard-check-icon color-text-success m-2 d-none">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
-
-where, venv is basically virtual env , you can name it anything mine was "Democracy"
+    </clipboard-copy>
+  </div></div>where, venv is basically virtual env , you can name it anything mine was "Democracy"
