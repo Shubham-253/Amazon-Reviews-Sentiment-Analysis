@@ -11,20 +11,18 @@ from IPython.display import Image
 import datetime
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from textblob import TextBlob
-from textblob.sentiments import NaiveBayesAnalyzer
 import matplotlib.pyplot as plt
-import seaborn as sns
 import math
 from time import sleep
 from stqdm import stqdm
+import os
 
-PATH ="C:\Program Files\chromedriver.exe"
-
-options = Options()
-options.headless = True
-
-driver = webdriver.Chrome(PATH,options=options)
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 def get_URL(url):
     Enter_URL=url
