@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 import time
 from selenium.webdriver.support import expected_conditions as EC
@@ -20,7 +21,10 @@ from stqdm import stqdm
 
 PATH ="C:\Program Files\chromedriver.exe"
 
-driver = webdriver.Chrome(PATH)
+options = Options()
+options.headless = True
+
+driver = webdriver.Chrome(PATH,options=options)
 
 def get_URL(url):
     Enter_URL=url
