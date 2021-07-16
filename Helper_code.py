@@ -35,14 +35,12 @@ def get_URL(url):
     
     SR = []
     LR = []
-    p=math.ceil([int(word) for word in ( driver.find_element_by_xpath('//*[@id="filter-info-section"]/div/span')).text.split("|")[1].split(" ") if word.isdigit()][0]/10)
+    p=math.ceil(int("".join([i for i in ( driver.find_element_by_xpath('//*[@id="filter-info-section"]/div/span')).text.split("|")[1] if i.isdigit()]))/10)
     print('No. of pages to scrape : ',p)   
     
     for i in stqdm(range(1,p+1)):
         driver.get(URL_turn_page+str(i))
-        #t=np.random.randint(1,6, size=1) #to make sleep time variable to avoid bot detection
-        #print('sleep time : ',t[0])
-        #time.sleep(t)
+
         for j in stqdm(range(1,11)):
             sleep(0.5)
             try:
@@ -76,16 +74,3 @@ def get_URL(url):
     df['Sentiment'] = df['Short_review'].apply(lambda x:sentiment_scores(x)) 
 
     return df
-
-
-''' ## TO CHECK THE CODE OUTSIDE STREAMLIT JUST RUN THIS FILE ITSELF ##
-
-url=input("enter url : ")
-df=get_URL(url)
-
-print(" Positive Reponses")
-print(df[df['Sentiment']=='pos']['Short_review'].reset_index(drop=True).head(10))
-        
-print(" Negative Reponses")
-print(df[df['Sentiment']=='neg']['Short_review'].reset_index(drop=True).head(10))
-'''
